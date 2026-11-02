@@ -1,0 +1,13 @@
+{
+  "schema_version": "syderial.signing-keys.v1",
+  "current_key_id": "2b32220c9552a7d5",
+  "legacy_key_id": "2b32220c9552a7d5",
+  "keys": [
+    {
+      "key_id": "2b32220c9552a7d5",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAqhY8+ajwKTrUafArqN+2XK9X/wJ+42xukqnB+tOICEw=\n-----END PUBLIC KEY-----\n",
+      "valid_from": "2026-11-01T00:00:00Z",
+      "valid_until": null
+    }
+  ]
+}

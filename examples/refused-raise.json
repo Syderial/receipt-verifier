@@ -1,0 +1,31 @@
+{
+  "schema_version": "syderial.action-receipt.v1",
+  "receipt_id": "local-example-refused-raise",
+  "action": {
+    "name": "raise_esp_pump_speed",
+    "arguments_hash": "c384b9916652bbf33ba0c875bd5add490451aed8f21dd661c04a9b63cf8d4985"
+  },
+  "principal": {
+    "kind": "agent",
+    "id": "local-example-agent"
+  },
+  "boundary_labels": {
+    "boundary": [
+      "example"
+    ],
+    "sensitivity": "public"
+  },
+  "authority": {
+    "decision": "deny",
+    "policy_ref": "local-example-policy"
+  },
+  "at": "2026-11-02T02:43:00.000Z",
+  "source": "Local signer example; not a live Well 47 receipt",
+  "receipt_digest": "426772da232be4a3124e98522cda49496b3a955a111e5ec99529f07ac7624dad",
+  "signature": {
+    "algorithm": "ed25519",
+    "key_id": "2b32220c9552a7d5",
+    "public_key_ref": "2b32220c9552a7d5",
+    "value": "ieNkAVglNnGuXH1UQ2t+ZF5/jEcadzGSPJhqngIRJI9J1Ge7lO1ztGTpwV4H+Yev0mnGcsF8efwcI2Vn2BJiAg=="
+  }
+}

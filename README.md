@@ -37,3 +37,28 @@ upstream recorded signed test fixture, not a production customer receipt.
 Run `npm test` on Node 22. Tests cover that signed fixture, tampering, a retired
 key inside and outside its window, and canonical integer keys and Unicode.
 No remote is configured. This package hasn't been published.
+
+## Verify the local examples
+
+`examples/refused-raise.json` and `examples/allowed-shut-in.json` are real
+Ed25519 signatures created by a local signer. They aren't the live Well 47
+receipts. The private key was generated in memory and wasn't saved. The
+example key set is for these examples only; it isn't the runtime's key set.
+Live Well 47 receipts can be added after the runtime deploys its cleared-viewer
+`signed_receipt` response.
+
+From this repository on Node 22:
+
+```sh
+node --input-type=module <<'JS'
+import { readFile } from 'node:fs/promises';
+import { verifyReceipt } from './index.js';
+const keys = JSON.parse(await readFile('examples/keys.json', 'utf8'));
+for (const name of ['refused-raise', 'allowed-shut-in']) {
+  const receipt = JSON.parse(await readFile(`examples/${name}.json`, 'utf8'));
+  const result = await verifyReceipt(receipt, keys);
+  console.log(name, result);
+  if (!result.verified) process.exitCode = 1;
+}
+JS
+```

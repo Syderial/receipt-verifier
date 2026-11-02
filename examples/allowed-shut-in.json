@@ -1,0 +1,31 @@
+{
+  "schema_version": "syderial.action-receipt.v1",
+  "receipt_id": "local-example-allowed-shut-in",
+  "action": {
+    "name": "shut_in_well",
+    "arguments_hash": "7558c2bc0dee214ccd8d0468a92575fba90c2041293b58115753fc2d49515fe6"
+  },
+  "principal": {
+    "kind": "agent",
+    "id": "local-example-agent"
+  },
+  "boundary_labels": {
+    "boundary": [
+      "example"
+    ],
+    "sensitivity": "public"
+  },
+  "authority": {
+    "decision": "allow",
+    "policy_ref": "local-example-policy"
+  },
+  "at": "2026-11-02T02:43:00.000Z",
+  "source": "Local signer example; not a live Well 47 receipt",
+  "receipt_digest": "6ecb8e61ac16d5c882cf52af07412981d51dc8b6511442e50859ab3f3ab6639f",
+  "signature": {
+    "algorithm": "ed25519",
+    "key_id": "2b32220c9552a7d5",
+    "public_key_ref": "2b32220c9552a7d5",
+    "value": "wDaIdPSykCxa8ly5l4KYhNJoK0b0nhN7eCqDeAKzoEOuKwe5JJ+46XgAhP6XZhnxszvljHVXYTjq2X5fF4fnCw=="
+  }
+}

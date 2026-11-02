@@ -26,3 +26,10 @@ test('retrieval answers fail closed without canonical payload and signed time', 
   assert.equal((await verifyAnswerReceipt({schema_version:'syderial.runtime.retrieval-receipt.v1'},keys)).verified,false);
   assert.match((await verifyAnswerReceipt({schema_version:'syderial.runtime.retrieval-receipt.v1',recall:{},candidates:[]},keys)).issues[0],/signed timestamp/);
 });
+test('both local signed examples verify with their published example key', async () => {
+  const exampleKeys = JSON.parse(readFileSync(new URL('../examples/keys.json', import.meta.url)));
+  for (const name of ['refused-raise', 'allowed-shut-in']) {
+    const example = JSON.parse(readFileSync(new URL(`../examples/${name}.json`, import.meta.url)));
+    assert.equal((await verifyReceipt(example, exampleKeys)).verified, true, name);
+  }
+});
