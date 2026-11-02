@@ -36,7 +36,6 @@ upstream recorded signed test fixture, not a production customer receipt.
 
 Run `npm test` on Node 22. Tests cover that signed fixture, tampering, a retired
 key inside and outside its window, and canonical integer keys and Unicode.
-No remote is configured. This package hasn't been published.
 
 ## Verify the local examples
 
