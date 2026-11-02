@@ -1,0 +1,30 @@
+{
+  "schema_version": "syderial.action-receipt.v1",
+  "receipt_id": "receipt-test-offline",
+  "action": {
+    "name": "read",
+    "arguments_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "principal": {
+    "kind": "agent",
+    "id": "test-agent"
+  },
+  "boundary_labels": {
+    "boundary": [
+      "business"
+    ],
+    "sensitivity": "internal"
+  },
+  "authority": {
+    "decision": "allow"
+  },
+  "at": "2026-10-24T12:00:00Z",
+  "source": "test",
+  "receipt_digest": "13966a4774672993463220f575e28fec1109035c9e1e22010d7c23385ca1e25e",
+  "signature": {
+    "algorithm": "ed25519",
+    "key_id": "094bf2503cb501a1",
+    "public_key_ref": "fixture",
+    "value": "zuFyTVRcuef6kuNzZjo3LYT9DOtQjSgCVs+WAn8LsvpFb1+vtYUxz38wIKRtauEt8YdTonWDlieQUiv4111pBQ=="
+  }
+}
